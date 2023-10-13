@@ -8,7 +8,7 @@ import BtnCreatePasien from "@/components/btn_create_pasien/component";
 
 const ListPasien = () => {
   const apiUrls = "http://localhost:3000/api/pasien";
-  const { datas, isLoading, refetchData } = useGetData(apiUrls);
+  const { datas, isLoading, error, refetchData } = useGetData(apiUrls);
   const [isRefetch, setIsRefetch] = useState(null)
 
   useEffect(() => {
@@ -22,6 +22,8 @@ const ListPasien = () => {
       <Box className="grid sm:grid-cols-3 sm:gap-5 gap-2">
         {isLoading ? (
           <Text>Loading...</Text>
+        ) : error ? (
+          <Text>Data tidak bisa dimuat</Text>
         ) : (
           datas.map((data, index) => (
             <Flex

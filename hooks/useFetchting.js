@@ -34,6 +34,7 @@ export const useCombineData = (apiUrls, dataKeys) => {
 
 export const useGetData = (url) => {
   const [datas, setDatas] = useState(null);
+  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
@@ -42,8 +43,9 @@ export const useGetData = (url) => {
       setDatas(response.data);
       setIsLoading(false);
     } catch (error) {
-      console.log("Error fetching data:", error);
+      console.log("Error fetching Get data:", error);
       setIsLoading(false);
+      setError(true)
     }
   };
 
@@ -51,7 +53,7 @@ export const useGetData = (url) => {
     fetchData();
   }, [url]);
 
-  return { datas, isLoading, refetchData: fetchData };
+  return { datas, isLoading, error, refetchData: fetchData };
 };
 
 export const usePostData = () => {
