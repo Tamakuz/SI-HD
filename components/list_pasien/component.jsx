@@ -7,7 +7,7 @@ import { useGetData } from "@/hooks/useFetchting";
 import BtnCreatePasien from "@/components/btn_create_pasien/component";
 
 const ListPasien = () => {
-  const apiUrls = "http://localhost:3000/api/pasien";
+  const apiUrls = "https://si-hd.vercel.app/api/pasien";
   const { datas, isLoading, error, refetchData } = useGetData(apiUrls);
   const [isRefetch, setIsRefetch] = useState(null)
 

@@ -23,7 +23,7 @@ import { usePostData } from "@/hooks/useFetchting";
 import useToastMessages from "@/hooks/useToast";
 
 const BtnCreatePasien = ({ setIsRefetch }) => {
-  const apiUrls = "http://localhost:3000/api/pasien";
+  const apiUrls = "https://si-hd.vercel.app/api/pasien";
   const [isPost, setIsPost] = useState(null);
   const [formData, setFormData] = useState({
     nama: "",
