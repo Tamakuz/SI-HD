@@ -1,6 +1,6 @@
-import NavBottom from "@/components/navigation_bottom/index";
+import NavBottom from "@/components/navigation_bottom/component";
 import StateComponent from "@/components/state/index";
-import ListPasienComponent from "@/components/list_pasien/index";
+import ListPasienComponent from "@/components/list_pasien/component";
 import {
   Box,
   ChakraProvider,

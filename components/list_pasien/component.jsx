@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { FcBusinessman } from "react-icons/fc";
 import { BsFillPencilFill, BsInfoLg } from "react-icons/bs";
 import { useGetData } from "@/hooks/useFetchting";
-import BtnCreatePasien from "@/components/btn_create_pasien/index";
+import BtnCreatePasien from "@/components/btn_create_pasien/component";
 
 const index = () => {
   const apiUrls = "http://localhost:3000/api/pasien";
