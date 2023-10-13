@@ -2,7 +2,7 @@ import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { FcBarChart } from "react-icons/fc";
 
-const index = () => {
+const State = () => {
   return (
     <Box className="grid sm:grid-cols-4 grid-cols-2 sm:gap-5 gap-2 justify-center items-center py-5">
       <Flex className="bg-gray-100 px-3 py-7 w-full rounded-xl shadow-md justify-center items-center gap-2">
@@ -37,4 +37,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default State;

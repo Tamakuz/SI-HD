@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { FcAcceptDatabase, FcAddDatabase, FcApproval, FcBarChart } from "react-icons/fc"
 
-const index = () => {
+const Navigation = () => {
   return (
     <Flex className="fixed bottom-0 left-1/2 -translate-x-1/2 py-4 px-4 justify-center">
       <Flex className="shadow-md py-3 px-5 w-fit rounded-xl gap-3 bg-gray-100">
@@ -16,4 +16,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navigation;

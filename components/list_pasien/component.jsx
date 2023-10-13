@@ -6,7 +6,7 @@ import { BsFillPencilFill, BsInfoLg } from "react-icons/bs";
 import { useGetData } from "@/hooks/useFetchting";
 import BtnCreatePasien from "@/components/btn_create_pasien/component";
 
-const index = () => {
+const ListPasien = () => {
   const apiUrls = "http://localhost:3000/api/pasien";
   const { datas, isLoading, refetchData } = useGetData(apiUrls);
   const [isRefetch, setIsRefetch] = useState(null)
@@ -64,4 +64,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default ListPasien;

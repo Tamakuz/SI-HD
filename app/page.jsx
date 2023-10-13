@@ -1,6 +1,4 @@
-import NavBottom from "@/components/navigation_bottom/component";
-import StateComponent from "@/components/state/index";
-import ListPasienComponent from "@/components/list_pasien/component";
+import State from "@/components/state/component";
 import {
   Box,
   ChakraProvider,
@@ -9,18 +7,10 @@ import {
   Text,
   extendTheme,
 } from "@chakra-ui/react";
+import ListPasien from "@/components/list_pasien/component";
+import Navigation from "@/components/navigation_bottom/component";
 
 export default function Home() {
-  const customTheme = extendTheme({
-    styles: {
-      global: {
-        // Hilangkan warna latar belakang
-        body: {
-          bg: "none",
-        },
-      },
-    },
-  });
 
   return (
     <ChakraProvider>
@@ -33,15 +23,15 @@ export default function Home() {
         </Stack>
 
         <Stack className="sm:px-60 px-5">
-          <StateComponent />
+          <State />
         </Stack>
 
         <Stack className="sm:px-60 px-5">
           <Text className="font-bold text-xl">Daftar Pasien</Text>
-          <ListPasienComponent />
+          <ListPasien />
         </Stack>
 
-        <NavBottom />
+        <Navigation />
       </Box>
     </ChakraProvider>
   );
